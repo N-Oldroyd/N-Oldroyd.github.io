@@ -25,7 +25,7 @@
     <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
     <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+    <title>Nicholas Oldroyd Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
 
     <!-- This is a link to the vega-lite which we're using to make graphs -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -44,15 +44,15 @@
 <!-- The body tag contains the elements that visitors to our page will see. -->
     <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
         <!-- This is a header, it is the largest text on the page -->
-        PROJECT
+        Economics, Data Science and everything inbewteen 
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Nicholas Oldroyd | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
-            href="https://www.github.com/YOUR_GITHUB">GitHub</a>
+        Nicholas Oldroyd | <a href="https://www.linkedin.com/in/nicholas-oldroyd-3911132a3/">LinkedIn</a> | <a
+            href="https://github.com/N-Oldroyd">GitHub</a>
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.  
+        This page contains a portfolio of charts that I have put together for practise. Eventually my full project will be displayed.  
     </h3>
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
@@ -60,8 +60,8 @@
         <div class="chart-description">
             <h2>Section 1: A basic chart</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+                Ive organised the page into sections, with each section containing a chart, title and a description. Here, I can describe the chart and give some context.
+                As a first example, here is a basic chart about GDP and life expectancy across countries.
             </p>
         </div>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -96,8 +96,7 @@
         <div class="chart-description">
             <h2>Section 2: Another basic chart</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+                This is a chart showing GDP per capita in 6 different countries.
             </p>
         </div>
         <figure id="Location2"></figure>
@@ -108,6 +107,42 @@
         vegaEmbed('#Location2', figure_2_spec) 
 
     
+
+    </script>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 3: UK Productivity</h2>
+            <p> 
+                This chart is taken from the Economics Observatory and charts UK productivity.
+            </p>
+        </div>
+        <figure id="Location3"></figure>
+    </section>
+
+    <script>        
+        let figure_3_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/uk_productivity.json"; 
+        vegaEmbed('#Location3', figure_3_spec) 
+
+
+
+    </script>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 4: UK Business Investment</h2>
+            <p> 
+                Another economics observatory graph, this shows UK business investment.
+            </p>
+        </div>
+        <figure id="Location4"></figure>
+    </section>
+
+    <script>        
+        let figure_4_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/uk_bus_investment.json"; 
+        vegaEmbed('#Location4', figure_4_spec) 
+
+
 
     </script>
 
