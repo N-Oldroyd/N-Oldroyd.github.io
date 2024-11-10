@@ -27,6 +27,13 @@ body { /* We can style any HTML element by using its name - here we're styling t
   font-size: 30px;
 }
 
+.nav-element {
+  font-size: 100px;
+  text-align: center;
+  color: greenyellow
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   color: #333;
   margin-top: 24px;
