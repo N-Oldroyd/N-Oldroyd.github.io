@@ -30,7 +30,11 @@ body { /* We can style any HTML element by using its name - here we're styling t
 .nav-element {
   font-size: 100px;
   text-align: center;
-  color: greenyellow
+  color: greenyellow;
+}
+
+.header-right {
+  float:right;
 }
 
 
