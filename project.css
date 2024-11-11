@@ -12,9 +12,8 @@ body { /* We can style any HTML element by using its name - here we're styling t
     line-height: 1.6;
     /* we want a white page, that's centered and not too wide */
     background-color: #fff;
-    margin:10px auto;
-    max-width: 800px;
-    padding-top: 60px;
+    margin:0px auto;
+    padding-top: 0px;
   }
   
   
@@ -79,7 +78,8 @@ body { /* We can style any HTML element by using its name - here we're styling t
   }
   
   section {
-    margin-bottom: 2.5em;  /* We want a little more space between sections */
+    margin-bottom: 2.5em;
+    margin-left: 20px;  /* We want a little more space between sections */
   }
   
   /* Links */
