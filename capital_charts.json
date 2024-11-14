@@ -15,7 +15,7 @@
             ],
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
             }
           },
@@ -30,7 +30,7 @@
             ],
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
             }
           },
@@ -45,7 +45,7 @@
             ],
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
             }
           }
@@ -64,7 +64,7 @@
             "title": "Service sector PNFCs net average capital employed in £million", 
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
             }
           },
@@ -79,7 +79,7 @@
             "title": "Manufacturing PNFCs net average capital employed in £million",
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
             }
           },
@@ -94,7 +94,7 @@
             "title": "Non-UKCS PNFCs net average capital employed in £million",
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
             }
           }
@@ -113,7 +113,7 @@
             "title": "Non-UKCS PNFCs net rate of return (%)",
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
             }
           },
@@ -128,7 +128,7 @@
             "title": "Service sector PNFCs net rate of return (%) SA",
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
             }
           },
@@ -143,7 +143,7 @@
             "title": "UKCS companies net rate of return (%)",
             "mark": "line",
             "encoding": {
-              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2022"]}},
+              "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
               "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
             }
           }
