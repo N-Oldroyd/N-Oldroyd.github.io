@@ -12,8 +12,7 @@
   "height": "container",
   "width": "container",
   "autosize": {
-    "type": "fit",
-    "contains": "padding"
+    "type": "fit"
   },
   "background": "#ffffff",
   "view": {
