@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "autosize": {"type": "fit", "contains": "padding"},
+    "autosize": {"type": "fit"},
     "description": "Tufte's Worst Example with Area Above Line for Under 25",
     "data": {
       "values": [
