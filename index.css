@@ -77,9 +77,20 @@ p {
   font-weight: 300;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row > div {
+  width: 700px;
+  margin: 10px;
+  align-content: center;
+  text-align: center;
+}
+
 section {
   margin-bottom: 2.5em;  /* We want a little more space between sections */
-  margin-left: 20px;
 }
 
 /* Links */
