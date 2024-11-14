@@ -80,6 +80,7 @@ p {
 .row {
   display: flex;
   flex-direction: row;
+  height: 400px;
 }
 
 .row > div {
