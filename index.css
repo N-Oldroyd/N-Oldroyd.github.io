@@ -78,17 +78,15 @@ p {
 }
 
 .row {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 400px;
   height: 400px;
+  align-items: center;
+  text-align: center;
+
 }
 
-.row > div {
-  width: 700px;
-  margin: 10px;
-  align-content: center;
-  text-align: center;
-}
 
 section {
   margin-bottom: 2.5em;  /* We want a little more space between sections */
