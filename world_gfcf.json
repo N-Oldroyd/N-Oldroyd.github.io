@@ -32,6 +32,9 @@
     },
     {"filter": "datum.date == Year"}
   ],
+  "projection": {
+    "type": "naturalearth1"
+  },
   "layer": [
     {
       "mark": {"type": "geoshape"},
