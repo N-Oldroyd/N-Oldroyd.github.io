@@ -9,11 +9,8 @@
     "color": "#000000",
     "subtitleColor": "#000000"
   },
-  "height": "container",
-  "width": "container",
-  "autosize": {
-    "type": "fit"
-  },
+  "height": 300,
+  "width": 400,
   "background": "#ffffff",
   "view": {
     "fill": "#ffffff",
