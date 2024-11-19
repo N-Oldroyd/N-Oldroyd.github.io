@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "UK Labour Productivity since 1970",
+    "height": 400,
+    "width": 500,
+    "data": {
+        "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/uk_productivity_data.json"
+    },
+    "transform": [
+    {"filter": "isValid(datum.date)"},
+    {"calculate": "datetime(datum.date, 1)", "as": "year"}
+    ],
+    "layer":[
+        {
+            "mark": "line",
+            "encoding": {
+                "x":{"field": "year", "type": "temporal", "title": ""},
+                "y":{"field": "y", "type":"quantitative", "title": "Labour Productivity Index, 2022 = 100"}
+                }
+        },
+        {
+            "mark": "line",
+            "encoding": {
+                "x": {"field": "year", "type": "temporal"},
+                "y": {"field": "fitted_y", "type": "quantitative", "title": ""},
+                "color": {"value": "red"}
+            }
+        }
+        
+    ]
+
+}
