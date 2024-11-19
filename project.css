@@ -5,103 +5,101 @@
 
 
 body { /* We can style any HTML element by using its name - here we're styling the body */
-    /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
-    font-family: 'Gill Sans', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
-    /* we want a white page, that's centered and not too wide */
-    background-color: #fff;
-    margin:0px auto;
-    padding-top: 0px;
-  }
-  
-  
-  /* Headings */
-  .header {
-    text-align: center;
-    background: #eaeaea;
-    color: rgb(0, 102, 255);
-    font-size: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-    width: 100%;
-    box-shadow: 0px 4px 8px rgba(87, 87, 87, 0.2);
-  }
+  /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
+  font-family: 'Gill Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  /* we want a white page, that's centered and not too wide */
+  background-color: #fff;
+  margin:0px auto;
+  padding-top: 0px;
+}
 
-  .header-element {
-    font-size: 20px;
-    text-align: center;
-    color: rgb(0, 102, 255);
-  }
-  
-  .header-right {
-    display: flex;
-    gap: 30px;
-    float:right;
-    text-align: center;
-    padding-right: 20px;
-  }
-  
-  .header-left {
-    float: left;
-    font-size: 40px;
-    padding-left: 20px;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #333;
-    margin-top: 24px;
-    margin-bottom: 16px;
-    font-weight: 600;
-  }
-  
-  /* We want the headings to be a little bigger than the paragraph text */
-  .big { /* This is the class we created in the HTML file, you can use it to style any element */
-    font-size: 2.5em;
-  }
-  
-  h2 {
-    font-size: 1.75em;
-  }
-  
-  .small {
-    font-size: 1.25em;
-  }
-  
-  /* Paragraph */
-  p {
-    margin-bottom: 1em;
-    font-weight: 300;
-  }
-  
-  section {
-    margin-bottom: 2.5em;
-    margin-left: 20px;  /* We want a little more space between sections */
-  }
-  
-  /* Links */
-  /* We want the links to be a little more visible  and a different color */
-  a {
-    color: #065f46;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-    
-  /* Images */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 
-  .nav-element {
-    text-decoration: none;
-    font-weight: 1px;
-    font-size: 20px;
-    color: #E9C46A;
-  }
+/* Headings */
+.header {
+  text-align: center;
+  background: #eaeaea;
+  color: rgb(0, 102, 255);
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(87, 87, 87, 0.2);
+}
+
+.header-element {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(0, 102, 255);
+}
+
+.header-right {
+  display: flex;
+  gap: 30px;
+  float:right;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.header-left {
+  float: left;
+  font-size: 40px;
+  padding-left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* We want the headings to be a little bigger than the paragraph text */
+.big { /* This is the class we created in the HTML file, you can use it to style any element */
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+.small {
+  font-size: 1.25em;
+}
+
+/* Paragraph */
+p {
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  text-align: center;
+
+}
+
+
+
+/* Links */
+/* We want the links to be a little more visible  and a different color */
+a {
+  color: #065f46;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+  
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
