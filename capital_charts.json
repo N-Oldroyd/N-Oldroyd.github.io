@@ -11,15 +11,19 @@
             },
             "height": 80,
             "width": 100,
-            "title": "PNFCs net average capital employed in £million", 
+            "title": {
+              "text": ["PNFCs net average capital", "employed in £million"],
+              "fontSize": 10
+            },
+         
             "transform":[
                 {"filter": "datum.year >=1995"}
             ],
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Capital (£)"}
+              }
           },
           {
             "data": {
@@ -28,15 +32,18 @@
             },
             "height": 80,
             "width": 100,
-            "title": "PNFCs net rate of return (%)",
+            "title": {
+              "text": "PNFCs net rate of return (%)",
+              "fontSize": 10
+            },
             "transform":[
                 {"filter": "datum.year >=1995"}
             ],
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Rate of Return (%)"}
+              }
           },
           {
             "data": {
@@ -45,16 +52,19 @@
             },
             "height": 80,
             "width": 100,
-            "title": "UKCS companies net average capital employed in £million",
+            "title": {
+              "text":["UKCS companies net average", "capital employed in £million"],
+              "fontSize": 10
+            },
             "transform":[
                 {"filter": "datum.year >=1995"}
             ],
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Capital (£)"}
+              }
             }
-          }
         ]
       },
       {
@@ -67,14 +77,17 @@
             "height": 80,
             "width": 100,
             "transform":[
-                {"filter": "datum.year >=1995"}
+              {"filter": "datum.year >=1995"}
             ],
-            "title": "Service sector PNFCs net average capital employed in £million", 
+            "title": {
+              "text": ["Service sector PNFCs net average", "capital employed in £million"],
+              "fontSize": 10
+            }, 
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Capital (£)"}
+              }
           },
           {
             "data": {
@@ -84,14 +97,17 @@
             "height": 80,
             "width": 100,
             "transform":[
-                {"filter": "datum.year >=1995"}
+              {"filter": "datum.year >=1995"}
             ],
-            "title": "Manufacturing PNFCs net average capital employed in £million",
+            "title": {
+              "text": ["Manufacturing PNFCs net average", "capital employed in £million"],
+              "fontSize": 10
+            },
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Capital (£)"}
+              }
           },
           {
             "data": {
@@ -101,14 +117,17 @@
             "height": 80,
             "width": 100,
             "transform":[
-                {"filter": "datum.year >=1995"}
+              {"filter": "datum.year >=1995"}
             ],
-            "title": "Non-UKCS PNFCs net average capital employed in £million",
+            "title": {
+              "text": ["Non-UKCS PNFCs net average", "capital employed in £million"],
+              "fontSize": 10
+            },
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Capital (£)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Capital (£)"}
+              }
           }
         ]
       },
@@ -122,14 +141,17 @@
             "height": 80,
             "width": 100,
             "transform":[
-                {"filter": "datum.year >=1995"}
+              {"filter": "datum.year >=1995"}
             ],
-            "title": "Non-UKCS PNFCs net rate of return (%)",
+            "title": {
+              "text": ["Non-UKCS PNFCs net", "rate of return (%)"],
+              "fontSize": 10
+            },
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Rate of Return (%)"}
+              }
           },
           {
             "data": {
@@ -139,14 +161,17 @@
             "height": 80,
             "width": 100,
             "transform":[
-                {"filter": "datum.year >=1995"}
+              {"filter": "datum.year >=1995"}
             ],
-            "title": "Service sector PNFCs net rate of return (%) SA",
+            "title": {
+              "text": ["Service sector PNFCs", "net rate of return (%) SA"],
+              "fontSize": 10
+            },
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Rate of Return (%)"}
+              }
           },
           {
             "data": {
@@ -156,14 +181,17 @@
             "height": 80,
             "width": 100,
             "transform":[
-                {"filter": "datum.year >=1995"}
+              {"filter": "datum.year >=1995"}
             ],
-            "title": "UKCS companies net rate of return (%)",
+            "title": {
+              "text": ["UKCS companies net", "rate of return (%)"],
+              "fontSize": 10
+            },
             "mark": "line",
             "encoding": {
               "x": {"field": "date", "type": "temporal", "title": "",  "scale": {"domain": ["1995", "2024"]}},
-              "y": {"field": "value", "type": "quantitative", "title": "Rate of Return (%)"}
-            }
+              "y": {"field": "value", "type": "quantitative", "axis": {"titleFontSize": 10}, "title": "Rate of Return (%)"}
+              }          
           }
         ]
       }
