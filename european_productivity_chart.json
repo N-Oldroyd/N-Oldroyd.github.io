@@ -5,6 +5,7 @@
   "vconcat":[
     {
     "width": 480,
+    "height": 300,
     "transform": [{"filter": 
     "datum.country == 'UK' || datum.country == 'Italy' || datum.country == 'Germany' || datum.country == 'Spain' || datum.country == 'Netherlands' || datum.country == 'Poland' || datum.country == 'Belgium' || datum.country == 'Sweden' || datum.country == 'Ireland'"}],
     "encoding": {
@@ -13,7 +14,7 @@
       "color": {
           "field":"country",
           "type":"nominal",
-          "legend": {"title": ""}
+          "legend": {"title": "", "orient": "bottom", "labelFontSize": 8}
       },
       "opacity": {
         "condition": [
@@ -32,6 +33,7 @@
           "type": "point",
           "fields": ["country"],
           "on": "click",
+          "toggle": "event.shiftKey",
           "clear": "dblclick"},
           "bind": "legend"        
         },
