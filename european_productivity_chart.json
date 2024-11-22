@@ -35,18 +35,10 @@
           "on": "click",
           "toggle": "event.shiftKey",
           "clear": "dblclick"},
-          "bind": "legend"        
-        },
-      
-        {
-          "name": "legendClick",
-          "select": {
-            "type": "point",
-            "fields": ["country"]},
-            "bind": "legend"
+          "bind": "legend"     
+        }
             
-            
-    }],
+    ],
       "mark": {"type": "line", "strokeWidth": 1.5, "stroke": "transparent"}
     }, {
       "mark": {"type": "line", "strokeWidth": 1.5, "tooltip": {"content": "encoding"}}
