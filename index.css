@@ -8,7 +8,7 @@ body { /* We can style any HTML element by using its name - here we're styling t
   /* We want text that uses a clean sans-serif font, is usually 16px big and close to black */
   font-family: 'Gill Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #333;
+  color: #cfcfcf;
   line-height: 1.6;
   /* we want a white page, that's centered and not too wide */
   background-color: #000a1c;
@@ -34,7 +34,7 @@ body { /* We can style any HTML element by using its name - here we're styling t
 .header-element {
   font-size: 20px;
   text-align: center;
-  color: rgb(0, 102, 255);
+  color: rgb(52, 131, 250);
 }
 
 .header-right {
@@ -52,7 +52,7 @@ body { /* We can style any HTML element by using its name - here we're styling t
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000000;
+  color: #ffffff;
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
@@ -90,7 +90,7 @@ p {
 /* Links */
 /* We want the links to be a little more visible  and a different color */
 a {
-  color: #065f46;
+  color: rgb(52, 131, 250);
   text-decoration: none;
 }
 
