@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Regional Inflation in the UK"
+    },
+    "width": 300,
+    "height": 450,
+    "data": 
+      {
+      "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/region_inflation.json"
+    },
+    "params": [
+    {
+      "name": "date",
+      "bind": {
+        "input": "range",
+        "min": 800000,
+        "max": 800000000
+      }
+    }
+  ],
+    "transform": [
+      {
+        "lookup": "region",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/datasets/advanced/nuts1.json",
+            "format": {"type": "json", "property": "features"}
+          },
+          "key": "properties.NUTS_NAME",
+          "fields": ["type", "properties", "geometry"]
+        }
+      },
+    {"calculate": "datum.weighted_inflation*100", "as": "inflation"
+    }
+
+
+    ],
+    "encoding": {
+      "color": {
+        "field": "inflation",
+        "type": "quantitative",
+        "scale": {"domain": [-1,2], "scheme": "darkblue", "reverse": true},
+        "legend": {
+          "title": "Annual Inflation (%)",
+          "labelFontWeight": "lighter",
+          "direction": "vertical",
+          "gradientLength": 200
+        }
+      },
+      "tooltip": [
+      {"field": "region", "title": "Country"},
+      {"field": "inflation", "title": "Inflation Rate"}
+    ]
+    },
+    "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.3}
+  }
+  
