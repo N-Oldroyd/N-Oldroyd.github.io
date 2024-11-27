@@ -79,7 +79,7 @@ p {
 
 .row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   align-items: center;
   text-align: center;
 
@@ -107,4 +107,7 @@ img {
 .figure {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
 }

@@ -27,7 +27,8 @@
     "bind": {
       "input": "range",
       "min": 1,
-      "max": 12
+      "max": 12,
+      "step": 1
     }
   }
   ],
@@ -45,7 +46,7 @@
       },
     {"calculate": "datum.weighted_inflation*100", "as": "inflation"
     },
-    {"filter": "year(datum.quote_date) == Year"}
+    {"filter": "year(datum.quote_date) == Year & month(datum.quote_date) == Month"}
 
 
     ],
