@@ -3,9 +3,9 @@
     "title": {
       "text": "Regional Inflation in the UK"
     },
-    "width": "container",
-    "height": "container",
-    "autosize": "fit",
+    "width": 300,
+    "height": 400,
+
     "data": 
       {
       "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/region_inflation.json"

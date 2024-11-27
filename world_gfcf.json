@@ -3,7 +3,7 @@
   "data": {
     "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/worldbank_data-4.json"
   },
-  "width": 600,
+  "width": 400,
   "height": 300,
   "params": [
     {
@@ -33,14 +33,19 @@
     {"filter": "datum.date == Year"}
   ],
   "projection": {
-    "type": "naturalearth1"
+    "type": "naturalEarth1"
   },
   "layer": [
     {
       "mark": {"type": "geoshape"},
-      "encoding": {"color": {"value": "lightgrey"}}
+      "encoding": {"color": {"value": "lightgrey"},
+    "tooltip": [
+      {"field": "county", "title": "Country"},
+      {"field": "value", "title": "Gross Fixed Capital Formation (% of GDP)"}]
+    }
     },
     {"mark": {"type": "geoshape"}}
   ],
+  
   "encoding": {"color": {"field": "value", "type": "quantitative"}}
 }
