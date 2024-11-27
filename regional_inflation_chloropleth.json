@@ -12,13 +12,24 @@
     },
     "params": [
     {
-      "name": "date",
+      "name": "Year",
+      "value": 2021,
       "bind": {
         "input": "range",
-        "min": 800000,
-        "max": 800000000
+        "min": 1996,
+        "max": 2021,
+        "step": 1
       }
+    },
+    {
+    "name": "Month",
+    "value": 1,
+    "bind": {
+      "input": "range",
+      "min": 1,
+      "max": 12
     }
+  }
   ],
     "transform": [
       {
@@ -33,7 +44,8 @@
         }
       },
     {"calculate": "datum.weighted_inflation*100", "as": "inflation"
-    }
+    },
+    {"filter": "year(datum.quote_date) == Year"}
 
 
     ],
