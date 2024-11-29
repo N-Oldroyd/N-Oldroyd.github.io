@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="project.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Nicholas Oldroyd Project</title>
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -50,10 +50,12 @@
                 Regression, productivity puzzle etc.
             </p>
         </div>
-        <div>
-            <figure id="Location1"></figure> 
-        </div>
     </div>
+    
+    <div class="row">
+        <figure id="Location1"></figure> 
+    </div>
+    
 
     <script>
         let figure_1_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/uk_productivity_analysis.json"; // We're storing the URL of the graph we want to display in a variable
@@ -68,10 +70,12 @@
                 Gross Fixed Capital Formation
             </p>
         </div>
-        <div>
-            <figure id="Location2"></figure> 
-        </div>
     </div>
+
+    <div class="row">
+        <figure id="Location2"></figure> 
+    </div>
+
 
     <script>
         let figure_2_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/world_gfcf.json"; // We're storing the URL of the graph we want to display in a variable
@@ -87,10 +91,12 @@
             You can click on the lines or the legend to highlight a specific country. If you would like to select multiple countries, shift and click.
         </p>
     </div>
-    <div>
-        <figure id="Location3"></figure> 
-    </div>
 </div>
+
+<div class="row">
+    <figure id="Location3"></figure> 
+</div>
+
 
 <script>
     let figure_3_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/european_productivity_chart.json"; // We're storing the URL of the graph we want to display in a variable
