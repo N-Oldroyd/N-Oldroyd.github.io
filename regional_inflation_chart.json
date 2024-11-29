@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A scatterplot showing horsepower and miles per gallons for various cars.",
     "title": {"text": "Regional Inflation", "subtitle": "Mean prices for selected goods since "},
     "data": {
             "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/region_inflation.json",
