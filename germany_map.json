@@ -1,17 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {"url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/german_employment_data.csv", "format": {"type": "csv"}},
+    "data": {"url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/german_employment_data.json", "format": {"type": "json"}},
     "width": 400,
     "height": 300,
     "transform": [
         {
-            "lookup": "NAME_1",
+            "lookup": "1_variable_attribute_label",
             "from": {
                 "data": {
-                    "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/german_employment_data.csv",
+                    "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/germany.geojson",
                     "format": {"property": "features"}
                 },
-                "key": "properties.1_variable_attribute_label",
+                "key": "properties.NAME_1",
                 "fields": ["type", "properties", "geometry"]
             }
         }
@@ -22,10 +22,10 @@
             "encoding": {"color": {"value": "lightgrey"},
         "tooltip": [
             {"field": "1_variable_attribute_label", "title": "Region"},
-            {"field": "value", "title": "employment"}
+            {"field": "value", "title": "Employment"}
         ]}
         },
         {"mark": {"type": "geoshape"}}
     ],
-    "encoding": {"color": {"field": "value", "type": "quantitative"}}
+    "encoding": {"color": {"field": "metric_value", "type": "quantitative"}}
 }
