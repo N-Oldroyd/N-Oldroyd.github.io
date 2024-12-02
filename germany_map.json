@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/german_employment_data.csv", "format": {"type": "csv"}},
+    "width": 400,
+    "height": 300,
+    "transform": [
+        {
+            "lookup": "NAME_1",
+            "from": {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/german_employment_data.csv",
+                    "format": {"property": "features"}
+                },
+                "key": "properties.1_variable_attribute_label",
+                "fields": ["type", "properties", "geometry"]
+            }
+        }
+    ],
+    "layer": [
+        {
+            "mark": {"type": "geoshape"},
+            "encoding": {"color": {"value": "lightgrey"},
+        "tooltip": [
+            {"field": "1_variable_attribute_label", "title": "Region"},
+            {"field": "value", "title": "employment"}
+        ]}
+        },
+        {"mark": {"type": "geoshape"}}
+    ],
+    "encoding": {"color": {"field": "value", "type": "quantitative"}}
+}
