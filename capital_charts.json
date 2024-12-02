@@ -9,8 +9,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRWU.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "title": {
               "text": ["PNFCs net average capital", "employed in £million"],
               "fontSize": 10
@@ -30,10 +30,10 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRWW.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "title": {
-              "text": "PNFCs net rate of return (%)",
+              "text": ["PNFCs net rate of", "return (%)"],
               "fontSize": 10
             },
             "transform":[
@@ -50,8 +50,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRXC.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "title": {
               "text":["UKCS companies net average", "capital employed in £million"],
               "fontSize": 10
@@ -74,8 +74,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRYO.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "transform":[
               {"filter": "datum.year >=1995"}
             ],
@@ -94,8 +94,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRYA.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "transform":[
               {"filter": "datum.year >=1995"}
             ],
@@ -114,8 +114,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRXN.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "transform":[
               {"filter": "datum.year >=1995"}
             ],
@@ -138,8 +138,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRXP.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "transform":[
               {"filter": "datum.year >=1995"}
             ],
@@ -158,8 +158,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRYQ.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "transform":[
               {"filter": "datum.year >=1995"}
             ],
@@ -178,8 +178,8 @@
                 "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/capital_data_LRXE.json",
                 "format": {"type": "json", "property": "years"}
             },
-            "height": 80,
-            "width": 100,
+            "height": 95,
+            "width": 110,
             "transform":[
               {"filter": "datum.year >=1995"}
             ],

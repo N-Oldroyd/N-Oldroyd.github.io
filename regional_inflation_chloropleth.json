@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-      "text": "Regional Inflation in the UK"
+      "text": "Prices in the UK", "subtitle": "Weighted annual change in average prices by region"
     },
-    "width": 300,
-    "height": 400,
+    "width": 400,
+    "height": 300,
 
     "data": 
       {
@@ -56,7 +56,7 @@
         "type": "quantitative",
         "scale": {"domain": [-1,2], "scheme": "darkblue", "reverse": true},
         "legend": {
-          "title": "Annual Inflation (%)",
+          "title": "Annual Price Change (%)",
           "labelFontWeight": "lighter",
           "direction": "vertical",
           "gradientLength": 200
