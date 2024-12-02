@@ -4,8 +4,8 @@
   "title": {"text": "Labour Productivity across European Countries", "anchor": "middle", "fontSize": 15},
   "vconcat":[
     {
-    "width": 480,
-    "height": 300,
+    "width": 600,
+    "height": 500,
     "transform": [{"filter": 
     "datum.country == 'UK' || datum.country == 'Italy' || datum.country == 'Germany' || datum.country == 'Spain' || datum.country == 'Netherlands' || datum.country == 'Poland' || datum.country == 'Belgium' || datum.country == 'Sweden' || datum.country == 'Ireland'"}],
     "encoding": {

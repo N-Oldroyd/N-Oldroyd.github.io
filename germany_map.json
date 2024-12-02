@@ -3,6 +3,7 @@
     "data": {"url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/german_employment_data.json", "format": {"type": "json"}},
     "width": 400,
     "height": 300,
+    "title": "Germany by Region",
     "transform": [
         {
             "lookup": "1_variable_attribute_label",
@@ -16,16 +17,8 @@
             }
         }
     ],
-    "layer": [
-        {
-            "mark": {"type": "geoshape"},
-            "encoding": {"color": {"value": "lightgrey"},
-        "tooltip": [
-            {"field": "1_variable_attribute_label", "title": "Region"},
-            {"field": "value", "title": "Employment"}
-        ]}
-        },
-        {"mark": {"type": "geoshape"}}
-    ],
-    "encoding": {"color": {"field": "metric_value", "type": "quantitative"}}
+    "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.3},
+    "encoding": {"color": {"value": "grey"},
+"tooltip": [
+            {"field": "1_variable_attribute_label", "title": "Region"}]}
 }

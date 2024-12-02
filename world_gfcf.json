@@ -3,8 +3,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/worldbank_data-4.json"
   },
-  "width": 400,
-  "height": 300,
+  "width": 600,
+  "height": 400,
+  "title": {"text": "Global Capital Investment", "subtitle": "Gross Fixed Capital Formation by Country (% GDP)", "fontSize": 15, "subtitleFontSize": 10},
   "params": [
     {
       "name": "Year",
@@ -14,7 +15,7 @@
         "step": 1,
         "min": 1975,
         "max": 2022,
-        "name": "Min Price:"
+        "name": "Year:"
       }
     }
   ],
@@ -40,12 +41,16 @@
       "mark": {"type": "geoshape"},
       "encoding": {"color": {"value": "lightgrey"},
     "tooltip": [
-      {"field": "county", "title": "Country"},
+      {"field": "country", "title": "Country"},
       {"field": "value", "title": "Gross Fixed Capital Formation (% of GDP)"}]
     }
     },
     {"mark": {"type": "geoshape"}}
   ],
   
-  "encoding": {"color": {"field": "value", "type": "quantitative"}}
+  "encoding": {"color": {"field": "value", "type": "quantitative", "legend": {"title": ""}, "scale": {"domain": [0,50]}},
+"tooltip": [
+      {"field": "country", "title": "Country"},
+      {"field": "value", "title": "Gross Fixed Capital Formation (% of GDP)"}],
+  }
 }
