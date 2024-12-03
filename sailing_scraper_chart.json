@@ -25,7 +25,7 @@
     "encoding": {
         "x": {"field": "country", "type": "nominal", "title": "", "axis": {"labelAngle": -45}},
         "y": {"field": "Count", "type": "quantitative", "title": ""},
-        "color": {"field": "Medal", "legend":{"title": ""}, "scale": {"domain": ["Gold", "Silver", "Bronze"], "range": ["rgb(255,215,25", "rgb(131,137,150)", "rgb(205,127,50)"]}},
+        "color": {"field": "Medal", "legend":{"title": "", "orient": "top-left"}, "scale": {"domain": ["Gold", "Silver", "Bronze"], "range": ["rgb(255,215,25", "rgb(131,137,150)", "rgb(205,127,50)"]}},
         "order": {"field": "MedalOrder"},
         "tooltip": [
             {"field": "country", "type": "nominal", "title": "Country"},

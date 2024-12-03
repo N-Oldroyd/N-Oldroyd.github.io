@@ -51,6 +51,6 @@
   "encoding": {"color": {"field": "value", "type": "quantitative", "legend": {"title": ""}, "scale": {"domain": [0,50]}},
 "tooltip": [
       {"field": "country", "title": "Country"},
-      {"field": "value", "title": "Gross Fixed Capital Formation (% of GDP)"}],
+      {"field": "value", "title": "Gross Fixed Capital Formation (% of GDP)"}]
   }
 }
