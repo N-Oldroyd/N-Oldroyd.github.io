@@ -12,7 +12,7 @@ body { /* We can style any HTML element by using its name - here we're styling t
   line-height: 1.6;
   /* we want a white page, that's centered and not too wide */
   background-color: #000a1c;
-  margin:0px auto;
+  margin-right:10px auto;
   padding-top: 0px;
 }
 
