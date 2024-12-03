@@ -5,8 +5,7 @@
     },
     "width": 400,
     "height": 300,
-    "autosize": "fit"
-
+    "autosize": "fit",
     "data": 
       {
       "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/region_inflation.json"
