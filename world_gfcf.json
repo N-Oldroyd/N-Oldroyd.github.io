@@ -5,7 +5,17 @@
   },
   "width": 600,
   "height": 400,
-  "title": {"text": "Global Capital Investment", "subtitle": "Gross Fixed Capital Formation by Country (% GDP)", "fontSize": 15, "subtitleFontSize": 10},
+  "title": {
+    "text": "Gross Fixed Capital Formation by Country (% GDP)", 
+    "subtitle": "Source: World Bank, 2024", 
+    "fontSize": 18, 
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "dx": 50,
+    "dy": 50,
+    "font": "Gill Sans",
+    "fontWeight": "normal",
+    "subtitleFont": "Gill Sans"},
   "params": [
     {
       "name": "Year",
@@ -48,7 +58,21 @@
     {"mark": {"type": "geoshape"}}
   ],
   
-  "encoding": {"color": {"field": "value", "type": "quantitative", "legend": {"title": ""}, "scale": {"domain": [0,50]}},
+  "encoding": {
+    "color": {
+              "field": "value", 
+              "type": "quantitative", 
+              "legend": {
+                "title": "% of GDP",
+                "titleAlign": "center",
+                "titleFont": "Gill Sans",
+                "titleFontWeight": "normal",
+                "orient": "none",
+                "legendY": 80,
+                "legendX": 620,
+                "labelFont": "Gill Sans"
+              }, 
+              "scale": {"domain": [0,50]}},
 "tooltip": [
       {"field": "country", "title": "Country"},
       {"field": "value", "title": "Gross Fixed Capital Formation (% of GDP)"}]
