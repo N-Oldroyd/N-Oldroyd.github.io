@@ -71,6 +71,33 @@
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
     </script>
 
+<div class="row">
+    <div>
+        <h2>European Productivity</h2>
+        <p> 
+            It is important to consider how productivity has developed in other countries to see if the UK really is an outlier. The chart below takes data 
+            from the ONS and Eurostat on GDP per hour worked. I have re-indexed the data to 1995 as the base year so that the recent development in productivity 
+            is clear. The python notebook can be accessed <a href="https://colab.research.google.com/drive/1wVbbUO-ASqrrXhN8u_yLuMgNdUMMnbx4?usp=sharing">here</a> 
+            The graph is interactive: filter for countries by clicking on legend elements, or the lines themselves; drag across the lower chart to select 
+            the time frame. The data seems to suggest we are not alone. Other countries have also faced low growth. However be aware this is a chart showing growth 
+            from an index year. It does not show the true difference in labour productivity between countries.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+    <figure id="Location3"></figure>
+    </div>
+</div>
+
+
+<script>
+    let figure_3_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/european_productivity_chart.json"; // We're storing the URL of the graph we want to display in a variable
+                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    vegaEmbed('#Location3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+</script>
+
     <div class="row">
         <div>
             <h2>Global Investment</h2>
@@ -102,29 +129,27 @@
 
 <div class="row">
     <div>
-        <h2>European Productivity</h2>
+        <h2>Why does this matter?</h2>
         <p> 
-            It is important to consider how productivity has developed in other countries to see if the UK really is an outlier. The chart below takes data 
-            from the ONS and Eurostat on GDP per hour worked. I have re-indexed the data to 1995 as the base year so that the recent development in productivity 
-            is clear. The python notebook can be accessed <a href="https://colab.research.google.com/drive/1wVbbUO-ASqrrXhN8u_yLuMgNdUMMnbx4?usp=sharing">here</a> 
-            The graph is interactive: filter for countries by clicking on legend elements, or the lines themselves; drag across the lower chart to select 
-            the time frame. The data seems to suggest we are not alone. Ger
+            Correlation between output per hour and business investment. Python notebook <a href="https://colab.research.google.com/drive/1LN0IHtjHchaMX2vZKwjQuY3hKByJFMbO?usp=sharing">here.</a>
         </p>
     </div>
 </div>
 
 <div class="row">
     <div>
-    <figure id="Location3"></figure>
+    <figure id="Location4"></figure> 
     </div>
 </div>
 
 
 <script>
-    let figure_3_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/european_productivity_chart.json"; // We're storing the URL of the graph we want to display in a variable
+    let figure_4_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/gdphrs_gfcf_chart.json"; // We're storing the URL of the graph we want to display in a variable
                                                                                                                 // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
-    vegaEmbed('#Location3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+    vegaEmbed('#Location4', figure_4_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 </script>
+
+
 
 </body>
 </html>
