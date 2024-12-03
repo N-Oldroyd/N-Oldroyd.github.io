@@ -36,10 +36,12 @@
 
 
 
-    <div>
-        <h1>Why has UK Labour Productivity Stagnated Since 2008</h2>
+    <div class="row">
+        <h1>Why has UK labour productivity stagnated since the Global Financial Crisis?</h2>
         <p>
-            lorum ipsum etc
+            Since the Global Financial Crisis of 2008, UK labour producivity has lagged behind a number of other developed economies, 
+            and crucially has grown at a significantly lower rate than the pre-2008 trend. This project aims to explore the extent of
+            this so called 'Productivity Puzzle', and examine the potential causes of this fall in productivity growth.
         </p>
     </div>
 
@@ -47,7 +49,11 @@
         <div>
             <h2>The Problem</h2>
             <p> 
-                Regression, productivity puzzle etc.
+                The chart below uses data from the ONS. Unfortunately ONS productivity data is not available from an API; I have used 
+                python to access the excel file containing productivity data. I have cleaned the data and used sklearn to conduct a linear 
+                regression on data from before 2008. This gives a linear trend from before the Global Financial Crisis. Overlaying the fitted 
+                line on top of the actual data shows a clear decoupling of output per hour from the pre-2008 trend rate. The python notebook 
+                can be accessed <a href = 'https://colab.research.google.com/drive/13CGdRzVevfxGeoKnH8LeQpfculZgPxQi?usp=sharing'>here.</a>
             </p>
         </div>
     </div>
@@ -67,9 +73,16 @@
 
     <div class="row">
         <div>
-            <h2>The World</h2>
+            <h2>Global Investment</h2>
             <p> 
-                Gross Fixed Capital Formation
+                Capital investment is a key contributor to labour productivity; in general we would expect a greater capital to labour ratio 
+                to correspond to higher productivity as workers have a greater level of real capital to work with. The chart below takes data 
+                from the world bank on gross fixed capital formation. I used a batch downloader to access data for each country and combine them to 
+                one dataframe. The python notebook can be accessed <a href='https://colab.research.google.com/drive/1djLi3YQz_z7Cr9CKQicytmGsh31pW3cY?usp=sharing'>here.</a> 
+                The data is quoted as percentage of GDP, this allows for comparison between countries and gives an indication of the capital-output 
+                ratio across countries. From the data we can see that the UK has had consistently lower capital formation than many other developed 
+                economies. Countries such as the US, France and Germany generally have capital formation of 20% or above, whereas the UK has seen 
+                rates as low as 15% in 2012.
             </p>
         </div>
     </div>
@@ -91,8 +104,11 @@
     <div>
         <h2>European Productivity</h2>
         <p> 
-            I have charted the year on year change in output per hour for key European economies. I first used python to access and clean the data. UK data is taken from the ONS, while European data is from Eurostat. The Python Notebook can be accessed <a href="https://colab.research.google.com/drive/1wVbbUO-ASqrrXhN8u_yLuMgNdUMMnbx4?usp=sharing">here.</a> 
-            You can click on the lines or the legend to highlight a specific country. If you would like to select multiple countries, shift and click.
+            It is important to consider how productivity has developed in other countries to see if the UK really is an outlier. The chart below takes data 
+            from the ONS and Eurostat on GDP per hour worked. I have re-indexed the data to 1995 as the base year so that the recent development in productivity 
+            is clear. The python notebook can be accessed <a href="https://colab.research.google.com/drive/1wVbbUO-ASqrrXhN8u_yLuMgNdUMMnbx4?usp=sharing">here</a> 
+            The graph is interactive: filter for countries by clicking on legend elements, or the lines themselves; drag across the lower chart to select 
+            the time frame. The data seems to suggest we are not alone. Ger
         </p>
     </div>
 </div>
