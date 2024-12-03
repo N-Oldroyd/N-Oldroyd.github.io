@@ -5,6 +5,7 @@
             "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/region_inflation.json",
             "format": {"type": "json"}
         },
+    "autosize": "fit",
     "width": 400,
     "height": 250,
     "transform":[
