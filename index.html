@@ -93,11 +93,28 @@
     </div>
 </div>
 
+<div class="row">
+    <div>
+    <p>This chart shows output per worker. Python notebook <a href='https://colab.research.google.com/drive/1yIHO65VgSrqEjmYgloc4-sX0F8dC1tZH?usp=sharing'>here.</a> </p>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+    <figure id="Location5"></figure>
+    </div>
+</div>
 
 <script>
     let figure_3_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/european_productivity_chart.json"; // We're storing the URL of the graph we want to display in a variable
                                                                                                                 // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
     vegaEmbed('#Location3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+</script>
+
+<script>
+    let figure_5_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/real_productivity_chart.json"; // We're storing the URL of the graph we want to display in a variable
+                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    vegaEmbed('#Location5', figure_5_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 </script>
 
     <div class="row">
