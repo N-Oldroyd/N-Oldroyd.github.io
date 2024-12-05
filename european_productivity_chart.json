@@ -15,7 +15,7 @@
   "vconcat":[
     {
     "width": 600,
-    "height": 520,
+    "height": 400,
     "transform": [{"filter": 
     "datum.country == 'UK' || datum.country == 'Italy' || datum.country == 'Germany' || datum.country == 'Spain' || datum.country == 'Netherlands' || datum.country == 'Poland' || datum.country == 'Belgium' || datum.country == 'Sweden' || datum.country == 'Ireland'"}],
     "encoding": {
@@ -94,7 +94,7 @@
 },
 {
     "width": 600,
-    "height": 60,
+    "height": 50,
     "mark": {"type": "line", "strokeWidth": 1},
     "params": [
       {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}, "value": 
