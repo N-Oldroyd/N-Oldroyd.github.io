@@ -1,0 +1,95 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 300,
+    "height": 300,
+    "data": {
+        "values": [
+            {"date": "1972-01-01", "value": 28.0, "age": "25 and Over"},
+            {"date": "1973-01-01", "value": 29.2, "age": "25 and Over"},
+            {"date": "1974-01-01", "value": 32.8, "age": "25 and Over"},
+            {"date": "1975-01-01", "value": 33.6, "age": "25 and Over"},
+            {"date": "1976-01-01", "value": 33.0, "age": "25 and Over"},
+            {"date": "1972-01-01", "value": 72.0, "age": "Under 25"},
+            {"date": "1973-01-01", "value": 70.8, "age": "Under 25"},
+            {"date": "1974-01-01", "value": 67.2, "age": "Under 25"},
+            {"date": "1975-01-01", "value": 66.4, "age": "Under 25"},
+            {"date": "1976-01-01", "value": 67.0, "age": "Under 25"}
+        ]
+    },
+    "transform":[
+      {
+        "calculate": "100 - datum.value", "as": "x"
+      }
+    ],
+    "layer": [
+      
+      {
+    "params": [
+        {
+            "name": "highlight",
+                            "select": {
+                                "type": "point",
+                                "on": "pointerover",
+                                "clear": "pointeroff"
+            }
+        }
+    ],
+    "mark": {"type": "bar", "size": 50},
+    "encoding": {
+        "x": {"field": "date", "type": "temporal", "scale": {"domain": ["1971-06-01","1976-06-01"]}, "title": "", "axis": {"tickCount": 5, "gridOpacity": 0}},
+        "y": {"field": "value", "type": "quantitative", "title": "College Enrollment (%)", "axis": {"titleAngle": 0, "titleY": -5, "titleX": 60}},
+        "color": {"field": "age", "legend": {"title": ""}},
+        "fillOpacity": {"condition": {
+            "param": "highlight",
+            "value": 1,
+            "empty": true
+        },
+        "value": 0.2
+    }
+    }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.age == '25 and Over'"
+        }
+      ],
+      "mark": {"type": "text", "yOffset":7},
+      "encoding": {
+        "text": {"field": "value"},
+        "y": {"field": "x", "scale": {"domain": [0,100]}, "type": "quantitative"},
+        "x": {"field": "date", "type": "temporal"},
+        "fillOpacity": {
+          "condition":{
+            "param":"highlight",
+            "value": 1,
+            "empty": false
+            },
+            "value": 0
+          }
+          
+      }
+      },
+      {
+      "transform": [
+        {
+          "filter": "datum.age == 'Under 25'"
+        }
+      ],
+      "mark": {"type": "text", "yOffset": -7},
+      "encoding": {
+        "text": {"field": "value"},
+        "y": {"field": "value", "scale": {"domain": [0,100]}, "type": "quantitative"},
+        "x": {"field": "date", "type": "temporal"},
+        "fillOpacity": {
+          "condition":{
+            "param":"highlight",
+            "value": 1,
+            "empty": false
+            },
+            "value": 0
+          }
+      }
+      }
+    ]
+}
