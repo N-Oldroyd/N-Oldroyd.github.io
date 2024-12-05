@@ -1,0 +1,178 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/ml_data.json"
+    },
+    "title": {"text": ""},
+    "hconcat": [
+        {
+            "height": 300,
+            "width": 400,
+            "params": [
+                {
+                    "name": "cluster_select",
+                    "value": [
+                        {
+                            "cluster": 1
+                        }
+                    ],
+                    "select": {
+                        "type": "point",
+                        "fields": [
+                            "cluster"
+                        ],
+                        "toggle": true,
+                        "on": "click",
+                        "clear": false
+                    },
+                    "bind": "legend"
+                }
+            ],
+            "mark": {
+                "type": "point",
+                "filled": true
+            },
+            "encoding": {
+                "x": {
+                    "field": "gdppc",
+                    "type": "quantitative",
+                    "title": "GDP per capita (current US$)",
+                    "axis": {
+                                "titleFont": "Gill Sans",
+                                "titleFontWeight": "normal",
+                                "titleFontSize":15
+                            }
+                },
+                "y": {
+                    "field": "gdppc_growth_rate",
+                    "type": "quantitative",
+                    "axis": {
+                                "titleFont": "Gill Sans",
+                                "titleFontWeight": "normal",
+                                "titleX": 20,
+                                "titleY": -25,
+                                "titleAngle": 0,
+                                "titleFontSize": 15
+                            },
+                            "title": ["GDP per capita", "growth rate (%)"]
+                },
+                "color": {
+                    "field": "cluster",
+                    "type": "nominal"
+                }
+            }
+        },
+        {
+            "height": 300,
+            "width": 400,
+            "transform": [
+                {
+                    "calculate": "'R^2: '+format(datum.r_squared, '.3f')",
+                    "as": "R2"
+                }
+            ],
+            "layer": [
+                {
+                    "params": [
+                        {
+                            "name": "scale",
+                            "bind": "scales",
+                            "select": {
+                                "type": "interval"
+                            },
+                            "value": false
+                        }
+                    ],
+                    "mark": {
+                        "type": "point",
+                        "filled": true
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "gdppc",
+                            "type": "quantitative",
+                            "title": "GDP per capita (current US$)",
+                            "axis": {
+                                "titleFont": "Gill Sans",
+                                "titleFontWeight": "normal",
+                                "titleFontSize":15
+                            }
+                        },
+                        "y": {
+                            "field": "gdppc_growth_rate",
+                            "type": "quantitative",
+                            "axis": {
+                                "titleFont": "Gill Sans",
+                                "titleFontWeight": "normal",
+                                "titleX": 20,
+                                "titleY": -25,
+                                "titleAngle": 0,
+                                "titleFontSize": 15
+                            },
+                            "title": ["GDP per capita", "growth rate (%)"]
+                        },
+                        "fillOpacity": {
+                            "condition": {
+                                "param": "cluster_select",
+                                "value": 1,
+                                "empty": true
+                            },
+                            "value": 0
+                        }
+                    }
+                },
+                {
+                    "mark": {
+                        "type": "line"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "gdppc",
+                            "type": "quantitative",
+                            "axis": {
+                                "titleFont": "Gill Sans",
+                                "titleFontWeight": "normal"
+                            }
+                        },
+                        "y": {
+                            "field": "y_pred",
+                            "type": "quantitative",
+                            "title": ""
+                        },
+                        "color": {
+                            "field": "cluster"
+                        },
+                        "opacity": {
+                            "condition": {
+                                "param": "cluster_select",
+                                "value": 1,
+                                "empty": true
+                            },
+                            "value": 0
+                        }
+                    }
+                },
+                {
+                    "mark": {
+                        "type": "text",
+                        "x": 370,
+                        "y": 10
+                    },
+                    "encoding": {
+                        "text": {
+                            "field": "R2"
+                        },
+                        "fillOpacity": {
+                            "condition": {
+                                "param": "cluster_select",
+                                "value": 1,
+                                "empty": false
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
