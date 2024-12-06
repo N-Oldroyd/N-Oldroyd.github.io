@@ -42,10 +42,15 @@
         <h1>Why has UK labour productivity stagnated since the Global Financial Crisis?</h2>
     </div>
     <div class="row">
+        <h2>Aims</h2>
+        </div>
+        <div class="row">
         <p>
-            Since the Global Financial Crisis of 2008, UK labour producivity has lagged behind a number of other developed economies, 
+            Since the Global Financial Crisis of 2008, UK labour productivity has lagged behind a number of other developed economies, 
             and crucially has grown at a significantly lower rate than the pre-2008 trend. This project aims to explore the extent of
-            this so called 'Productivity Puzzle', and examine the potential causes of this fall in productivity growth.
+            this so called 'Productivity Puzzle', and examine the potential causes of this fall in productivity growth. I will examine data 
+            from across the world on productivity, investment and industrial policy, and demonstrate that the UK is facing structural issues 
+            that underpin our dissapointing labour productivity.
         </p>
     </div>
 
@@ -53,10 +58,11 @@
         <div>
             <h2>The Problem</h2>
             <p> 
-                The chart below uses data from the ONS. Unfortunately ONS productivity data is not available from an API; I have used 
-                python to access the excel file containing productivity data. I have cleaned the data and used sklearn to conduct a linear 
-                regression on data from before 2008. This gives a linear trend from before the Global Financial Crisis. Overlaying the fitted 
-                line on top of the actual data shows a clear decoupling of output per hour from the pre-2008 trend rate. The python notebook 
+                The chart below uses data from the ONS. UK productivity data is not available from the ONS API so this has been accessed from an excel 
+                download, through python. I have cleaned the data and used sklearn to conduct a linear regression on data from before 2008. 
+                This shows a clear trend from before the Global Financial Crisis. The UK has clearly decoupled from its previous trend of steady
+                productivity growth. The 'gap' in productivity we are facing is significant, and has serious ramifications for British standards of living, and our 
+                competitivenss on the global stage. The python notebook used for cleaning and regression 
                 can be accessed <a href = 'https://colab.research.google.com/drive/13CGdRzVevfxGeoKnH8LeQpfculZgPxQi?usp=sharing'>here.</a>
             </p>
         </div>
@@ -79,11 +85,16 @@
     <div>
         <h2>European Productivity</h2>
         <p> 
-            It is important to consider how productivity has developed in other countries to see if the UK really is an outlier. The chart below takes data 
+            As dire as the first chart makes it seem, it is important to consider how productivity has developed in other countries to see if the UK really is an outlier. 
+            <br>
+            <br>
+            The chart below takes data 
             from the ONS and Eurostat on GDP per hour worked. I have re-indexed the data to 1995 as the base year so that the recent development in productivity 
             is clear. The python notebook can be accessed <a href="https://colab.research.google.com/drive/1wVbbUO-ASqrrXhN8u_yLuMgNdUMMnbx4?usp=sharing">here</a> 
+            <br>
+            <br>
             The graph is interactive: filter for countries by clicking on legend elements, or the lines themselves; drag across the lower chart to select 
-            the time frame. The data seems to suggest we are not alone. Other countries have also faced low growth. However be aware this is a chart showing growth 
+            the time frame. The data seems to suggest we are not alone. Other strong European economies such as Germany, the Netherlands and Belgium have also faced low growth. However be aware this is a chart showing growth 
             from an index year. It does not show the true difference in labour productivity between countries.
         </p>
     </div>
@@ -97,7 +108,11 @@
 
 <div class="row">
     <div>
-    <p>This chart shows output per worker. Python notebook <a href='https://colab.research.google.com/drive/1yIHO65VgSrqEjmYgloc4-sX0F8dC1tZH?usp=sharing'>here.</a> </p>
+    <p>The next chart takes data from the World Bank on output per worker. I have calculated the 'shortfall' in British productivity, shown in the lower section of the visualisation. 
+        This is the percentage difference in productivity between each country and the UK. The python notebook can be accessed <a href='https://colab.research.google.com/drive/1yIHO65VgSrqEjmYgloc4-sX0F8dC1tZH?usp=sharing'>here.</a> 
+        It is immediately evident that the UK has been lagging behind other major economies since the 90's. There seemed to be some closing of the gap pre-2008, however following the 
+        Global Financial Crisis, the UK has once again been trailing in productivity.
+    </p>
     </div>
 </div>
 
@@ -124,13 +139,18 @@
             <h2>Global Investment</h2>
             <p> 
                 Capital investment is a key contributor to labour productivity; in general we would expect a greater capital to labour ratio 
-                to correspond to higher productivity as workers have a greater level of real capital to work with. The chart below takes data 
+                to correspond to higher productivity as workers have a greater level of real capital to work with. 
+                <br>
+                <br>
+                The chart below takes data 
                 from the world bank on gross fixed capital formation. I used a batch downloader to access data for each country and combine them to 
                 one dataframe. The python notebook can be accessed <a href='https://colab.research.google.com/drive/1djLi3YQz_z7Cr9CKQicytmGsh31pW3cY?usp=sharing'>here.</a> 
+                <br>
+                <br>
                 The data is quoted as percentage of GDP, this allows for comparison between countries and gives an indication of the capital-output 
                 ratio across countries. From the data we can see that the UK has had consistently lower capital formation than many other developed 
                 economies. Countries such as the US, France and Germany generally have capital formation of 20% or above, whereas the UK has seen 
-                rates as low as 15% in 2012.
+                rates as low as 15%, as in 2012.
             </p>
         </div>
     </div>
@@ -152,7 +172,10 @@
     <div>
         <h2>Why does this matter?</h2>
         <p> 
-            Correlation between output per hour and business investment. Python notebook <a href="https://colab.research.google.com/drive/1LN0IHtjHchaMX2vZKwjQuY3hKByJFMbO?usp=sharing">here.</a>
+            The link between investment and productivity has not always been strong. There are many other factors that impact productivity such as R&D spending, or exogenous shocks. In the chart below I have conducted 
+            seperate regressions on 4 different periods, in an attempt to control some of these exogenous factors. What is evident is a strong correlation between capital investment and productivity since 2008. This chart 
+            also uses World Bank data on the 10 largest European economies. I have used sklearn to conduct linear regressions, the python notebook can be accessed 
+            <a href="https://colab.research.google.com/drive/1LN0IHtjHchaMX2vZKwjQuY3hKByJFMbO?usp=sharing">here.</a> The graph is also interactive: scroll to zoom in on individual graphs.
         </p>
     </div>
 </div>
@@ -174,7 +197,10 @@
     <div>
         <h2>Industry Analysis</h2>
         <p> 
-            Correlation between output per hour and business investment. Python notebook <a href="https://colab.research.google.com/drive/1aXWw3_5YEs36iKgpr9HIu1o-U1iVfD_P?usp=sharing">here.</a>
+            Another potential cause of low productivity is a shift from high to low productivity sectors. I have taken data from the ONS on employment levels and productivity by sector. 
+            I have calculated some additional metrics on <a href="https://colab.research.google.com/drive/1aXWw3_5YEs36iKgpr9HIu1o-U1iVfD_P?usp=sharing">python</a> to allow for better analysis. Specifically, 
+            relative productivity refers to how productive a sector is compared with the national average (i.e a value of 1). The data highlights a significant shift away from manufacturing and wholesale trade, which have
+            remained as the most productive sectors since 2007. 
         </p>
     </div>
 </div>
@@ -192,7 +218,63 @@
     vegaEmbed('#Location6', figure_6_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 </script>
 
+<div class="row">
+    <div>
+    <h2>Data</h2>
+    <p>
+        The data in this project has been obtained from the ONS, Eurostat, the OECD and the World Bank. The majority of datasets were accessed via APIs. 
+        A few datasets, specifically productivity data from the ONS is only available as an excel, in this case I have still used python to directl access 
+        the excel file on the ONS webpage to ensure automation in my data cleaning. All data was first cleaned in Python using pandas, before being exported as JSON 
+        files for use in vega-lite. Links to my colab files are here:
+    </p>
+    </div>
+</div>
+<div class="row">
+    <div>
+        
+        <a href="https://colab.research.google.com/drive/13CGdRzVevfxGeoKnH8LeQpfculZgPxQi?usp=sharing">Colab - Chart 1: Trend in Productivity</a>
+        <br>
+        <a href="https://colab.research.google.com/drive/1wVbbUO-ASqrrXhN8u_yLuMgNdUMMnbx4?usp=sharing">Colab - Chart 2: European Productivity</a>
+        <br>
+        <a href="https://colab.research.google.com/drive/1yIHO65VgSrqEjmYgloc4-sX0F8dC1tZH?usp=sharing">Colab - Chart 3: European Productivity</a>
+        <br>
+        <a href="https://colab.research.google.com/drive/1djLi3YQz_z7Cr9CKQicytmGsh31pW3cY?usp=sharing">Colab - Chart 4: Global Investment</a>
+        <br>
+        <a href="https://colab.research.google.com/drive/1LN0IHtjHchaMX2vZKwjQuY3hKByJFMbO?usp=sharing">Colab - Chart 5: Productivity-Investment Correlation</a>
+        <br>
+        <a href="https://colab.research.google.com/drive/1aXWw3_5YEs36iKgpr9HIu1o-U1iVfD_P?usp=sharing">Colab - Chart 6: Industry Productivity</a>
+    </div>
+</div>
 
+<div class="row">
+    <div>
+        <h2>Challenges</h2>
+        <p>
+            Finding data has been relatively easy due to the nature of my project: macroeconomic indicators are freely published by national and global bodies such 
+            as the ONS, Eurostat and the World Bank. 
+            <br>
+            <br>
+            I faced some difficulties cleaning and utilising the ONS industry productivity data. The data was taken from excel files, which warrants a basic level of cleaning, 
+            however there was more significant difficulty when merging datasets as the labelling and formatting of different British industries varies across datasets. 
+            My solution was to label all the industries with SIC 2007 codes using a python dictionary; some rows had to be summed due to groupings of different industries, however 
+            I successfully managed to merge my required datasets using industry codes so that I could compare employment levels and productivity.
+            <br>
+            <br>
+            Another issue I have faced in this project is inconsistency in measuring productivity. UK data is not available on Eurostat; the UK measures output per hour by index of
+            GBP whereas the EU obviously measures in index or Euros. For my comparison across countries I chose to use an index for one graph (this required re-indexing due again 
+            to differences between Eurostat and ONS) and output per worker for the other chart, as the World Bank only measures output per worker.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+        <h2>Conclusions</h2>
+        <p>
+
+        </p>
+    </div>
+</div>
 
 </body>
 </html>
