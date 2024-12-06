@@ -143,8 +143,7 @@
                 <br>
                 The data is quoted as percentage of GDP, this allows for comparison between countries and gives an indication of the capital-output 
                 ratio across countries. From the data we can see that the UK has had consistently lower capital formation than many other developed 
-                economies. Countries such as the US, France and Germany generally have capital formation of 20% or above, whereas the UK has seen 
-                rates as low as 15%, as in 2012.
+                economies.
             </p>
         </div>
     </div>
@@ -166,9 +165,8 @@
     <div>
         <h2>Why does this matter?</h2>
         <p> 
-            The link between investment and productivity has not always been strong. There are many other factors that impact productivity such as R&D spending, or exogenous shocks. In the chart below I have conducted 
-            seperate regressions on 4 different periods, in an attempt to control some of these exogenous factors. What is evident is a strong correlation between capital investment and productivity since 2008. This chart 
-            also uses World Bank data on the 10 largest European economies. I have used sklearn to conduct linear regressions; the graph is also interactive: scroll to zoom in on individual graphs.
+            There are many other factors that impact productivity such as R&D spending, or exogenous shocks. In the chart below I have conducted 
+            seperate regressions on 4 different periods, in an attempt to control some of these exogenous factors. What is evident is a strong correlation between capital investment and productivity since 2008. I have used sklearn to conduct linear regressions; the graph is also interactive: scroll to zoom in on individual graphs.
         </p>
     </div>
 </div>
@@ -190,10 +188,8 @@
     <div>
         <h2>Industry Analysis</h2>
         <p> 
-            Another potential cause of low productivity is a shift from high to low productivity sectors. I have taken data from the ONS on employment levels and productivity by sector. 
-            I have calculated some additional metrics on <a href="https://colab.research.google.com/drive/1aXWw3_5YEs36iKgpr9HIu1o-U1iVfD_P?usp=sharing">python</a> to allow for better analysis. Specifically, 
-            relative productivity refers to how productive a sector is compared with the national average (i.e a value of 1). The data highlights a significant shift away from manufacturing and wholesale trade, which have
-            remained as the most productive sectors since 2007. 
+            Another potential cause of low productivity is a shift from high to low productivity sectors. The chart shows relative productivity (compared with national average), against 
+            proportion of employment for each industry. The right hand chart shows the change in employment up to 2023 by industry.
         </p>
     </div>
 </div>
@@ -238,8 +234,8 @@
     <h2>Data</h2>
     <p>
         The data in this project has been obtained from the ONS, Eurostat, the OECD and the World Bank. The majority of datasets were accessed via APIs. 
-        A few datasets, specifically productivity data from the ONS is only available as an excel, in this case I have still used python to directl access 
-        the excel file on the ONS webpage to ensure automation in my data cleaning. All data was first cleaned in Python using pandas, before being exported as JSON 
+        A few datasets, specifically productivity data from the ONS is only available as an excel, in this case I have still used python to directly access 
+        the excel file on the ONS webpage to ensure automation in my data cleaning. All data was first cleaned in Python, before being exported as JSON 
         files for use in vega-lite. Links to my colab files are here:
     </p>
     </div>
@@ -271,10 +267,10 @@
             as the ONS, Eurostat and the World Bank. 
             <br>
             <br>
-            I faced some difficulties cleaning and utilising the ONS industry productivity data. The data was taken from excel files, which warrants a basic level of cleaning, 
-            however there was more significant difficulty when merging datasets as the labelling and formatting of different British industries varies across datasets. 
+            I faced some difficulties cleaning and utilising the ONS productivity data. The data was taken from excel files,  
+            however ther was difficulty when merging datasets as the labelling and formatting of different British industries varies across datasets. 
             My solution was to label all the industries with SIC 2007 codes using a python dictionary; some rows had to be summed due to groupings of different industries, however 
-            I successfully managed to merge my required datasets using industry codes so that I could compare employment levels and productivity.
+            I successfully managed to merge my required datasets using industry codes.
             <br>
             <br>
             Throughout the project I have made extensive use of interactivity to ensure I can display all the necessary data. Interactive visuals 
