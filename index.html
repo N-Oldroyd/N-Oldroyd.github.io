@@ -58,11 +58,9 @@
         <div>
             <h2>The Problem</h2>
             <p> 
-                The chart below uses data from the ONS. UK productivity data is not available from the ONS API so this has been accessed from an excel 
-                download, through python. I have cleaned the data and used sklearn to conduct a linear regression on data from before 2008. 
+                The chart below uses data from the ONS. I have cleaned the data and used sklearn to conduct a linear regression on data from before 2008. 
                 This shows a clear trend from before the Global Financial Crisis. The UK has clearly decoupled from its previous trend of steady
-                productivity growth. The 'gap' in productivity we are facing is significant, and has serious ramifications for British standards of living, and our 
-                competitivenss on the global stage. The python notebook used for cleaning and regression 
+                productivity growth. The python notebook 
                 can be accessed <a href = 'https://colab.research.google.com/drive/13CGdRzVevfxGeoKnH8LeQpfculZgPxQi?usp=sharing'>here.</a>
             </p>
         </div>
@@ -85,7 +83,7 @@
     <div>
         <h2>European Productivity</h2>
         <p> 
-            As dire as the first chart makes it seem, it is important to consider how productivity has developed in other countries to see if the UK really is an outlier. 
+            It is important to consider how productivity has developed in other countries to see if the UK really is an outlier. 
             <br>
             <br>
             The chart below takes data 
@@ -95,7 +93,7 @@
             <br>
             The graph is interactive: filter for countries by clicking on legend elements, or the lines themselves; drag across the lower chart to select 
             the time frame. The data seems to suggest we are not alone. Other strong European economies such as Germany, the Netherlands and Belgium have also faced low growth. However be aware this is a chart showing growth 
-            from an index year. It does not show the true difference in labour productivity between countries.
+            from an index year. 
         </p>
     </div>
 </div>
@@ -108,7 +106,7 @@
 
 <div class="row">
     <div>
-    <p>The next chart takes data from the World Bank on output per worker. I have calculated the 'shortfall' in British productivity, shown in the lower section of the visualisation. 
+    <p>The next chart takes data from the World Bank on output per worker. This shows actual values rather than indexes. I have calculated the 'shortfall' in British productivity, shown in the lower section of the visualisation. 
         This is the percentage difference in productivity between each country and the UK. The python notebook can be accessed <a href='https://colab.research.google.com/drive/1yIHO65VgSrqEjmYgloc4-sX0F8dC1tZH?usp=sharing'>here.</a> 
         It is immediately evident that the UK has been lagging behind other major economies since the 90's. There seemed to be some closing of the gap pre-2008, however following the 
         Global Financial Crisis, the UK has once again been trailing in productivity.
@@ -139,7 +137,7 @@
             <h2>Global Investment</h2>
             <p> 
                 Capital investment is a key contributor to labour productivity; in general we would expect a greater capital to labour ratio 
-                to correspond to higher productivity as workers have a greater level of real capital to work with. 
+                to correspond to higher productivity.
                 <br>
                 <br>
                 The chart below takes data 
@@ -260,9 +258,8 @@
             I successfully managed to merge my required datasets using industry codes so that I could compare employment levels and productivity.
             <br>
             <br>
-            Another issue I have faced in this project is inconsistency in measuring productivity. UK data is not available on Eurostat; the UK measures output per hour by index of
-            GBP whereas the EU obviously measures in index or Euros. For my comparison across countries I chose to use an index for one graph (this required re-indexing due again 
-            to differences between Eurostat and ONS) and output per worker for the other chart, as the World Bank only measures output per worker.
+            Throughout the project I have made extensive use of interactivity to ensure I can display all the necessary data. Interactive visuals 
+            have allowed for comparisons between countries and across time periods with multiple variables, to ensure the full picture can be understood.
         </p>
     </div>
 </div>
@@ -271,7 +268,13 @@
     <div>
         <h2>Conclusions</h2>
         <p>
-
+            The data shows that the UK is facing a significant issue with labour productivity. Low business investment and a shift in industry towards lower 
+            productivity service sectors is holding the UK back from maintaining pace with other developed economies.
+            <br>
+            <br>
+            The 'Productivity Puzzle' is an enormous issue, and there is far more data that could be analysed to try and examine its causes. In particular, 
+            there is a need to examine British investment in innovation, in terms of R&D spending, as well as investment into upskilling workers, either through 
+            formal education, aprenticeships or retraining programs. 
         </p>
     </div>
 </div>
