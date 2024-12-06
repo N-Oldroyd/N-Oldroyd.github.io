@@ -58,7 +58,7 @@
         <div>
             <h2>The Problem</h2>
             <p> 
-                The chart below uses data from the ONS. I have cleaned the data and used sklearn to conduct a linear regression on data from before 2008. 
+                I have used sklearn to conduct a linear regression on data from before 2008. 
                 The UK has clearly decoupled from its previous trend of steady
                 productivity growth. </p>
         </div>
@@ -82,11 +82,10 @@
         <h2>European Productivity</h2>
         <p> 
             It is important to consider how productivity has developed in other countries to see if the UK really is an outlier. 
-            The data seems to suggest we are not alone. Other strong European economies such as Germany, the Netherlands and Belgium have also faced low growth. 
+            The data seems to suggest we are not alone: other strong European economies such as Germany, the Netherlands and Belgium have also faced low growth. 
             <br>
             <br>
-            The chart takes data 
-            from the ONS and Eurostat on GDP per hour worked. I have re-indexed the data to 1995 as the base year so that the recent development in productivity 
+            The chart measures GDP per hour worked. I have re-indexed the data to 1995 as the base year so that the recent development in productivity 
             is clear. 
             <br>
             <br>
@@ -103,7 +102,7 @@
 
 <div class="row">
     <div>
-    <p>The next chart takes data from the World Bank on output per worker. This shows actual values rather than indexes. I have calculated the 'shortfall' in British productivity, shown in the lower section of the visualisation. 
+    <p>The next chart uses data on output per worker. This shows actual output rather than indexes. I have calculated the 'shortfall' in British productivity, shown in the lower section of the visualisation. 
         This is the percentage difference in productivity between each country and the UK. 
         It is immediately evident that the UK has been lagging behind other major economies since the 90's. 
     </p>
@@ -136,11 +135,6 @@
                 to correspond to higher productivity.
                 <br>
                 <br>
-                The chart below takes data 
-                from the world bank on gross fixed capital formation. I used a batch downloader to access data for each country and combine them to 
-                one dataframe. 
-                <br>
-                <br>
                 The data is quoted as percentage of GDP, this allows for comparison between countries and gives an indication of the capital-output 
                 ratio across countries. From the data we can see that the UK has had consistently lower capital formation than many other developed 
                 economies.
@@ -165,8 +159,8 @@
     <div>
         <h2>Why does this matter?</h2>
         <p> 
-            There are many other factors that impact productivity such as R&D spending, or exogenous shocks. In the chart below I have conducted 
-            seperate regressions on 4 different periods, in an attempt to control some of these exogenous factors. What is evident is a strong correlation between capital investment and productivity since 2008. I have used sklearn to conduct linear regressions; the graph is also interactive: scroll to zoom in on individual graphs.
+            In the chart below I have conducted 
+            seperate regressions on 4 different periods using sklearn, in an attempt to control some exogenous factors such as the GFC. What is evident is a strong correlation between capital investment and productivity since 2008. The graph is also interactive: scroll to zoom in on individual graphs.
         </p>
     </div>
 </div>
@@ -188,8 +182,8 @@
     <div>
         <h2>Industry Analysis</h2>
         <p> 
-            Another potential cause of low productivity is a shift from high to low productivity sectors. The chart shows relative productivity (compared with national average), against 
-            proportion of employment for each industry. The right hand chart shows the change in employment up to 2023 by industry.
+            Another cause of low productivity is a shift from high to low productivity sectors. The chart shows relative productivity (compared with national average), against 
+            employment for each industry. The right hand chart shows the change in employment up to 2023 by industry.
         </p>
     </div>
 </div>
@@ -211,7 +205,7 @@
     <div>
         <h2>Research and Development</h2>
         <p> 
-            The last chart shows the proportion of GDP spent on research and development by major economies. The UK is noticeably on the lower end. 
+            The last chart shows the proportion of GDP spent on R&D by major economies.  
         </p>
     </div>
 </div>
@@ -233,9 +227,9 @@
     <div>
     <h2>Data</h2>
     <p>
-        The data in this project has been obtained from the ONS, Eurostat, the OECD and the World Bank. The majority of datasets were accessed via APIs. 
+        The data in this project has been obtained from the ONS, Eurostat and the World Bank. The majority of datasets were accessed via APIs. 
         A few datasets, specifically productivity data from the ONS is only available as an excel, in this case I have still used python to directly access 
-        the excel file on the ONS webpage to ensure automation in my data cleaning. All data was first cleaned in Python, before being exported as JSON 
+        the excel file on the ONS webpage. All data was first cleaned in Python, before being exported as JSON 
         files for use in vega-lite. Links to my colab files are here:
     </p>
     </div>
@@ -273,7 +267,7 @@
             I successfully managed to merge my required datasets using industry codes.
             <br>
             <br>
-            Throughout the project I have made extensive use of interactivity to ensure I can display all the necessary data. Interactive visuals 
+            Throughout the project I have made use of interactivity to ensure I can display all the necessary data. Interactive visuals 
             have allowed for comparisons between countries and across time periods with multiple variables, to ensure the full picture can be understood.
         </p>
     </div>
@@ -290,7 +284,7 @@
             <br>
             The 'Productivity Puzzle' is an enormous issue, and there is far more data that could be analysed to try and examine its causes. In particular, 
             there is a need to examine British investment into upskilling workers, either through 
-            formal education, aprenticeships or retraining programs, to better understand how we can invest in human capital.
+            formal education, apprenticeships or re-training programs, to better understand how we can invest in human capital.
         </p>
     </div>
 </div>
