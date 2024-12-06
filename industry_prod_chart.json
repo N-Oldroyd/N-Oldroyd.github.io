@@ -1,0 +1,216 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/industry_productivity.json"
+  },
+  "title": {
+    "text": "Productivity by Industry",
+    "subtitle": "Source: ONS 2024",
+    "anchor": "start",
+    "dx": 25,
+    "fontSize": 18,
+    "subtitleFontSize": 10,
+    "subtitleFont": "Gill Sans",
+    "font": "Gill Sans",
+    "fontWeight": "normal"
+  },
+  "params": [
+    {
+      "name": "Year",
+      "bind": {
+        "input": "range",
+        "max": 2023,
+        "min": 1997,
+        "step": 1
+      },
+      "value": 1997
+    }
+  ],
+  "hconcat": [
+    {
+      "height": 300,
+      "width": 300,
+      "transform": [
+        {
+          "filter": "datum.Year == Year"
+        }
+      ],
+      "params": [
+            {
+              "name": "hover",
+              "select": {
+                "type": "point",
+                "on": "pointerover"
+              }
+            }
+          ],
+      "mark": {"type": "point", "filled": true, "size": 85, "opacity": 1},
+      "encoding": {
+        "y": {
+          "field": "employment_share",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              20
+            ]
+          },
+          "title": "Share of labour force",
+          "axis": {
+            "labelFont": "Gill Sans",
+            "titleFont": "Gill Sans",
+            "titleFontWeight": "normal"
+          }
+        },
+        "color": {
+          "field": "Industry_Code",
+          "type": "nominal",
+          "legend": {
+            "title": "SIC 2007 Codes",
+            "labelFont": "Gill Sans",
+            "titleFont": "Gill Sans",
+            "titleFontWeight": "normal"
+          }
+        },
+        "x": {
+          "field": "rel_gdphrs",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              3
+            ]
+          },
+          "axis": {
+            "labelFont": "Gill Sans",
+            "titleFont": "Gill Sans",
+            "titleFontWeight": "normal",
+            "title": "Relative Productivity",
+            "labelFontWeight": "normal"
+          }
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "hover", 
+            "value": 1, 
+            "empty": true
+            }, 
+            "value": 0.3},
+        "tooltip": [
+          {
+            "field": "industry",
+            "title": "Industry"
+          },
+          {
+            "field": "Year"
+          },
+          {
+            "title": "Employment Share (%)",
+            "field": "employment_share",
+            "format": ".2f"
+          },
+          {
+            "field": "rel_gdphrs",
+            "title": "Relative Productivity",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "width": 300,
+      "height": 300,
+      "layer": [
+        {
+          "transform": [
+            {
+              "filter": "datum.Year == Year"
+            },
+            {
+              "calculate": "datum.percentage_change * (-1)",
+              "as": "pct_change"
+            }
+          ],
+          "params": [
+            {
+              "name": "hover",
+              "select": {
+                "type": "point",
+                "on": "pointerover"
+              }
+            }
+          ],
+          "mark": {
+            "type": "bar"
+          },
+          "encoding": {
+            "x": {
+              "field": "Industry_Code",
+              "type": "nominal",
+              "sort": {
+                "field": "rel_gdphrs",
+                "order": "descending"
+              },
+              "title": "",
+              "axis": {
+                "labelFont": "Gill Sans",
+                "labelAngle": 45
+              }
+            },
+            "y": {
+              "field": "pct_change",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  -120,
+                  80
+                ]
+              },
+              "title": "% Change to 2023",
+              "axis": {
+                "titleFont": "Gill Sans",
+                "titleFontWeight": "normal",
+                "labelFont": "Gill Sans"
+              }
+            },
+            "color": {
+              "field": "rel_gdphrs",
+              "type": "quantitative",
+              "scale": {"scheme": "blues", "reverse": false},
+              "legend": {
+                "labelFont": "Gill Sans",
+                "title": ["Relative", "Productivity"],
+                "titleFont": "Gill Sans",
+                "titleFontWeight": "normal"
+              }
+            },
+            "fillOpacity": {
+              "condition": {
+                "param": "hover",
+                "value": 1,
+                "empty": true
+              },
+              "value": 0.2
+            },
+            "tooltip": [
+              {
+                "field": "pct_change",
+                "title": "% Change"
+              },
+              {
+                "field": "rel_gdphrs",
+                "title": "Relative Productivity",
+                "format": ".2f"
+              },
+              {
+                "field": "industry",
+                "title": "Industry"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

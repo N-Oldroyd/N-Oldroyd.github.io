@@ -19,18 +19,7 @@
 
 <body>
 
-<div class="loadingscreen">
-<p>
-    Loading please wait
-</p>
-</div>
 
-<script>
-    var loadingscreen = document.querySelector(".loadingscreen");
-    window.addEventListener('load', function() {
-  loadingScreen.style.display = 'none';
-})
-</script>
 
     <div class="header">
         <div class="header-left">
@@ -179,6 +168,28 @@
     let figure_4_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/gdphrs_gfcf_chart.json"; // We're storing the URL of the graph we want to display in a variable
                                                                                                                 // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
     vegaEmbed('#Location4', figure_4_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+</script>
+
+<div class="row">
+    <div>
+        <h2>Industry Analysis</h2>
+        <p> 
+            Correlation between output per hour and business investment. Python notebook <a href="https://colab.research.google.com/drive/1aXWw3_5YEs36iKgpr9HIu1o-U1iVfD_P?usp=sharing">here.</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+    <figure id="Location6"></figure> 
+    </div>
+</div>
+
+
+<script>
+    let figure_6_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/industry_prod_chart.json"; // We're storing the URL of the graph we want to display in a variable
+                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    vegaEmbed('#Location6', figure_6_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 </script>
 
 
