@@ -59,10 +59,8 @@
             <h2>The Problem</h2>
             <p> 
                 The chart below uses data from the ONS. I have cleaned the data and used sklearn to conduct a linear regression on data from before 2008. 
-                This shows a clear trend from before the Global Financial Crisis. The UK has clearly decoupled from its previous trend of steady
-                productivity growth. The python notebook 
-                can be accessed <a href = 'https://colab.research.google.com/drive/13CGdRzVevfxGeoKnH8LeQpfculZgPxQi?usp=sharing'>here.</a>
-            </p>
+                The UK has clearly decoupled from its previous trend of steady
+                productivity growth. </p>
         </div>
     </div>
     
@@ -84,16 +82,15 @@
         <h2>European Productivity</h2>
         <p> 
             It is important to consider how productivity has developed in other countries to see if the UK really is an outlier. 
+            The data seems to suggest we are not alone. Other strong European economies such as Germany, the Netherlands and Belgium have also faced low growth. 
             <br>
             <br>
-            The chart below takes data 
+            The chart takes data 
             from the ONS and Eurostat on GDP per hour worked. I have re-indexed the data to 1995 as the base year so that the recent development in productivity 
-            is clear. The python notebook can be accessed <a href="https://colab.research.google.com/drive/1wVbbUO-ASqrrXhN8u_yLuMgNdUMMnbx4?usp=sharing">here</a> 
+            is clear. 
             <br>
             <br>
-            The graph is interactive: filter for countries by clicking on legend elements, or the lines themselves; drag across the lower chart to select 
-            the time frame. The data seems to suggest we are not alone. Other strong European economies such as Germany, the Netherlands and Belgium have also faced low growth. However be aware this is a chart showing growth 
-            from an index year. 
+            
         </p>
     </div>
 </div>
@@ -107,9 +104,8 @@
 <div class="row">
     <div>
     <p>The next chart takes data from the World Bank on output per worker. This shows actual values rather than indexes. I have calculated the 'shortfall' in British productivity, shown in the lower section of the visualisation. 
-        This is the percentage difference in productivity between each country and the UK. The python notebook can be accessed <a href='https://colab.research.google.com/drive/1yIHO65VgSrqEjmYgloc4-sX0F8dC1tZH?usp=sharing'>here.</a> 
-        It is immediately evident that the UK has been lagging behind other major economies since the 90's. There seemed to be some closing of the gap pre-2008, however following the 
-        Global Financial Crisis, the UK has once again been trailing in productivity.
+        This is the percentage difference in productivity between each country and the UK. 
+        It is immediately evident that the UK has been lagging behind other major economies since the 90's. 
     </p>
     </div>
 </div>
@@ -142,7 +138,7 @@
                 <br>
                 The chart below takes data 
                 from the world bank on gross fixed capital formation. I used a batch downloader to access data for each country and combine them to 
-                one dataframe. The python notebook can be accessed <a href='https://colab.research.google.com/drive/1djLi3YQz_z7Cr9CKQicytmGsh31pW3cY?usp=sharing'>here.</a> 
+                one dataframe. 
                 <br>
                 <br>
                 The data is quoted as percentage of GDP, this allows for comparison between countries and gives an indication of the capital-output 
@@ -172,8 +168,7 @@
         <p> 
             The link between investment and productivity has not always been strong. There are many other factors that impact productivity such as R&D spending, or exogenous shocks. In the chart below I have conducted 
             seperate regressions on 4 different periods, in an attempt to control some of these exogenous factors. What is evident is a strong correlation between capital investment and productivity since 2008. This chart 
-            also uses World Bank data on the 10 largest European economies. I have used sklearn to conduct linear regressions, the python notebook can be accessed 
-            <a href="https://colab.research.google.com/drive/1LN0IHtjHchaMX2vZKwjQuY3hKByJFMbO?usp=sharing">here.</a> The graph is also interactive: scroll to zoom in on individual graphs.
+            also uses World Bank data on the 10 largest European economies. I have used sklearn to conduct linear regressions; the graph is also interactive: scroll to zoom in on individual graphs.
         </p>
     </div>
 </div>
@@ -218,6 +213,28 @@
 
 <div class="row">
     <div>
+        <h2>Research and Development</h2>
+        <p> 
+            The last chart shows the proportion of GDP spent on research and development by major economies. The UK is noticeably on the lower end. 
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div>
+    <figure id="Location10"></figure> 
+    </div>
+</div>
+
+
+<script>
+    let figure_10_spec = "https://raw.githubusercontent.com/N-Oldroyd/N-Oldroyd.github.io/refs/heads/main/r&d_comparison.json"; // We're storing the URL of the graph we want to display in a variable
+                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    vegaEmbed('#Location10', figure_10_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+</script>
+
+<div class="row">
+    <div>
     <h2>Data</h2>
     <p>
         The data in this project has been obtained from the ONS, Eurostat, the OECD and the World Bank. The majority of datasets were accessed via APIs. 
@@ -241,6 +258,8 @@
         <a href="https://colab.research.google.com/drive/1LN0IHtjHchaMX2vZKwjQuY3hKByJFMbO?usp=sharing">Colab - Chart 5: Productivity-Investment Correlation</a>
         <br>
         <a href="https://colab.research.google.com/drive/1aXWw3_5YEs36iKgpr9HIu1o-U1iVfD_P?usp=sharing">Colab - Chart 6: Industry Productivity</a>
+        <br>
+        <a href="https://colab.research.google.com/drive/16RJjReIsJbiBPehhe-_iYGPW3puguKvD?usp=sharing">Colab - Chart 7: R&D</a>
     </div>
 </div>
 
@@ -269,12 +288,13 @@
         <h2>Conclusions</h2>
         <p>
             The data shows that the UK is facing a significant issue with labour productivity. Low business investment and a shift in industry towards lower 
-            productivity service sectors is holding the UK back from maintaining pace with other developed economies.
+            productivity service sectors is holding the UK back from maintaining pace with other developed economies. Additionally, British spending on research and development is lower than
+            many other major economies, likely hindering it from achieving the same level of productivity.
             <br>
             <br>
             The 'Productivity Puzzle' is an enormous issue, and there is far more data that could be analysed to try and examine its causes. In particular, 
-            there is a need to examine British investment in innovation, in terms of R&D spending, as well as investment into upskilling workers, either through 
-            formal education, aprenticeships or retraining programs. 
+            there is a need to examine British investment into upskilling workers, either through 
+            formal education, aprenticeships or retraining programs, to better understand how we can invest in human capital.
         </p>
     </div>
 </div>
